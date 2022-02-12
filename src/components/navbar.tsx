@@ -100,13 +100,13 @@ export default function Navbar() {
   const [isDark, setIsDark] = useContext(Darkcontext);
 
   useEffect(() => {
-    gsap.to("#navFade", { opacity: 1, delay: 2 });
+    gsap.to("#navFade", { opacity: 1, delay: 2, translateY: 0 });
   });
 
   return (
     <div
       id="navFade"
-      className="fixed w-full opacity-0 z-50 bg-slate-100 dark:bg-slate-800 shadow"
+      className="fixed w-full -translate-y-8 opacity-0 z-50 bg-slate-100 dark:bg-slate-800 shadow"
     >
       <Popover className="relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
